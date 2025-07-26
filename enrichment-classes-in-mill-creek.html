@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" c>
+    <title>Enrichment Classes Services in Mill Creek, WA | The Preschool at Forest Park</title>
+    <meta name="description" c>
+    <meta name="keywords" c>
+    <meta name="robots" c>
+    <meta name="author" c>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" c>
+    <meta property="og:url" c>
+    <meta property="og:title" c>
+    <meta property="og:description" c>
+    <meta property="og:site_name" c>
+    
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" c>
+    <meta property="twitter:url" c>
+    <meta property="twitter:title" c>
+    <meta property="twitter:description" c>
+    
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://forestparkpreschool.com//enrichment-classes-in-mill-creek">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FAQ Structured Data -->
+    
+    
+    <style>
+        
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #000000;
+        background: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+    
+    @media (min-width: 640px) {
+        .container {
+            padding: 0 2.5rem;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .container {
+            padding: 0 4rem;
+        }
+    }
+    
+    /* Burger Menu Styles */
+    .burger-menu {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        background: #FFD700;
+        border: 2px solid #000000;
+        border-radius: 0;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    
+    .burger-menu:hover {
+        background: #000000;
+    }
+    
+    .burger-menu:hover .burger-line {
+        background: #FFD700;
+    }
+    
+    .burger-line {
+        width: 25px;
+        height: 3px;
+        background: #000000;
+        margin: 2px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100vh;
+        background: #ffffff;
+        border-right: 2px solid #000000;
+        z-index: 999;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        padding-top: 80px;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu h3 {
+        padding: 0 20px 10px 20px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #000000;
+        border-bottom: 1px solid #cccccc;
+        margin-bottom: 20px;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px 20px;
+        color: #000000;
+        text-decoration: none;
+        border-bottom: 1px solid #f0f0f0;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .nav-link:hover {
+        background: #FFD700;
+    }
+    
+    .nav-link.active {
+        background: #FFD700;
+        color: #000000;
+    }
+    
+    .nav-city, .nav-service {
+        font-weight: 600;
+        font-size: 1rem;
+        display: block;
+    }
+    
+    .nav-location {
+        font-size: 0.875rem;
+        color: #666666;
+        margin-top: 2px;
+        display: block;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    header {
+        background: #FFD700;
+        color: #000000;
+        padding: 1.5rem 0;
+        border-bottom: 2px solid #000000;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    .logo {
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+        font-weight: 700;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+    }
+  
+        
+        /* Hero Section */
+        .hero {
+            background: #ffffff;
+            padding: clamp(2rem, 8vw, 4rem) 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .subtitle {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #333333;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button, .button {
+            background: #FFD700;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: clamp(12px, 3vw, 16px) clamp(20px, 5vw, 32px);
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 600;
+            font-size: clamp(14px, 3vw, 16px);
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .cta-button:hover, .button:hover {
+            background: #000000;
+            color: #FFD700;
+        }
+        
+        /* Sections */
+        .section {
+            padding: clamp(2rem, 6vw, 3rem) 0;
+        }
+        
+        .section + .section {
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .section h2 {
+            font-size: clamp(1.25rem, 4vw, 2rem);
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: clamp(1.5rem, 4vw, 2rem);
+            line-height: 1.2;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        /* Content text improvements */
+        .content-text {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: #000000;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .content-text {
+                padding: 0 2rem;
+            }
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1.5rem, 4vw, 2rem) 0;
+        }
+        
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .benefit-card {
+            background: #FFD700;
+            padding: clamp(1.5rem, 4vw, 2rem);
+            border-radius: 0;
+            border: 2px solid #000000;
+            transition: none;
+        }
+        
+        .benefit-card h3 {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        
+        .benefit-card p {
+            color: #000000;
+            line-height: 1.6;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: left;
+        }
+        
+        /* Steps */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1.5rem, 4vw, 2rem) 0;
+        }
+        
+        .step {
+            text-align: center;
+            padding: clamp(1.5rem, 4vw, 2rem);
+            background: #FFD700;
+            border-radius: 0;
+            border: 2px solid #000000;
+        }
+        
+        .step-number {
+            background: #000000;
+            color: #FFD700;
+            width: clamp(2.5rem, 8vw, 3rem);
+            height: clamp(2.5rem, 8vw, 3rem);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            margin: 0 auto 1.5rem auto;
+        }
+        
+        .step h3 {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #000000;
+            line-height: 1.3;
+            text-align: center;
+        }
+        
+        .step p {
+            color: #000000;
+            line-height: 1.6;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: left;
+        }
+        
+        /* Testimonials - Fixed quote styling */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1.5rem, 4vw, 2rem) 0;
+        }
+        
+        .testimonial {
+            background: #FFD700;
+            padding: clamp(2rem, 5vw, 2.5rem);
+            border-radius: 0;
+            border: 2px solid #000000;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #333333;
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-weight: 700;
+            opacity: 0.7;
+            z-index: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            line-height: 1.6;
+            color: #000000;
+            text-align: left;
+            position: relative;
+            z-index: 2;
+            margin-top: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #000000;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: center;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 2px solid #000000;
+            border-radius: 0;
+            overflow: hidden;
+            background: #ffffff;
+        }
+        
+        .faq-item details {
+            cursor: pointer;
+        }
+        
+        .faq-item summary {
+            background: #ffffff;
+            padding: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 600;
+            color: #000000;
+            border-bottom: 1px solid #000000;
+            cursor: pointer;
+            list-style: none;
+            transition: background-color 0.3s ease;
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            line-height: 1.4;
+            text-align: left;
+        }
+        
+        .faq-item summary:hover {
+            background: #f5f5f5;
+        }
+        
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .faq-item summary::after {
+            content: '+';
+            float: right;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #000000;
+            font-weight: 700;
+        }
+        
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+        
+        .faq-answer {
+            padding: clamp(1rem, 3vw, 1.5rem);
+            background: #ffffff;
+            line-height: 1.6;
+            color: #000000;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: left;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: #ffffff;
+            color: #000000;
+            padding: clamp(2rem, 6vw, 4rem) 0;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .final-cta h2 {
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta p {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            margin-bottom: 2rem;
+            opacity: 1;
+            line-height: 1.5;
+        }
+        
+        .final-cta .cta-button {
+            background: #FFD700;
+            color: #000000;
+            border: 2px solid #000000;
+        }
+        
+        .final-cta .cta-button:hover {
+            background: #000000;
+            color: #FFD700;
+        }
+        
+        /* Footer */
+        footer {
+            background: #ffffff;
+            color: #000000;
+            padding: clamp(2rem, 5vw, 3rem) 0;
+            text-align: center;
+            border-top: 1px solid #cccccc;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            opacity: 1;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            line-height: 1.5;
+        }
+        
+        footer a {
+            color: #000000;
+            text-decoration: underline;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            .hero { padding: 2rem 0; }
+            .section { padding: 2rem 0; }
+            .steps { grid-template-columns: 1fr; }
+            .testimonials { grid-template-columns: 1fr; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            
+            .nav-menu {
+                width: 280px;
+                left: -280px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container { padding: 0 10px; }
+            .hero { padding: 1.5rem 0; }
+            .section { padding: 1.5rem 0; }
+            .benefit-card, .step, .testimonial { padding: 1rem; }
+        }
+    </style>
+    <meta name="google-site-verification" content="0329356589488d40c3b3bcb64dd4b49e" />
+    <meta name="google-site-verification" content="fbc9f2b9da6c9d97d5f6ad77485a466f" />
+  </head>
+<body>
+    <!-- Burger Menu -->
+    <div class="burger-menu" >
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <h3>All Preschool and Summer Camp Pages</h3>
+        
+    <a href="fullday-preschool-program-in-mukilteo.html" class="nav-link" data-page="fullday-preschool-program-in-mukilteo.html">
+      <span class="nav-city">Full-Day Preschool Program</span>
+      <small class="nav-location">Mukilteo</small>
+    </a>
+  
+    <a href="halfday-preschool-program-in-lynnwood.html" class="nav-link" data-page="halfday-preschool-program-in-lynnwood.html">
+      <span class="nav-city">Half-Day Preschool Program</span>
+      <small class="nav-location">Lynnwood</small>
+    </a>
+  
+    <a href="before-and-after-care-in-marysville.html" class="nav-link" data-page="before-and-after-care-in-marysville.html">
+      <span class="nav-city">Before and After Care</span>
+      <small class="nav-location">Marysville</small>
+    </a>
+  
+    <a href="enrichment-classes-in-mill-creek.html" class="nav-link active" data-page="enrichment-classes-in-mill-creek.html">
+      <span class="nav-city">Enrichment Classes</span>
+      <small class="nav-location">Mill Creek</small>
+    </a>
+  
+    <a href="parentchild-playgroups-in-edmonds.html" class="nav-link" data-page="parentchild-playgroups-in-edmonds.html">
+      <span class="nav-city">Parent-Child Playgroups</span>
+      <small class="nav-location">Edmonds</small>
+    </a>
+  
+    </nav>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" ></div>
+    
+    <header>
+        <div class="container">
+            <a href="https://forestparkpreschool.com/" class="logo">The Preschool at Forest Park</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Expert Enrichment Classes Services in Mill Creek, WA | The Preschool at Forest Park</h1>
+            <p class="subtitle">Professional enrichment classes services in Mill Creek, WA. The Preschool at Forest Park delivers exceptional results with licensed professionals, modern equipment, and 100% satisfaction guarantee.</p>
+            <a href="https://forestparkpreschool.com//contact" class="cta-button">Get Your Free Enrichment Classes Quote Today</a>
+        </div>
+    </section>
+    
+    <!-- AI Generated Image Section -->
+    
+    
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <p class="content-text">The Preschool at Forest Park has established itself as the leading provider of enrichment classes services in Mill Creek, WA through years of dedicated service and continuous improvement. Our track record demonstrates consistent delivery of high-quality results that meet the diverse needs of residential and commercial clients.</p>
+            <p class="content-text">Every enrichment classes project presents unique challenges, and our experienced team approaches each one with fresh perspective and proven methodology. We combine technical expertise with creative problem-solving to develop solutions that are both effective and cost-efficient, ensuring optimal outcomes for every client.</p>
+            <p class="content-text">Our commitment to excellence extends beyond basic service delivery. We invest in ongoing training, premium equipment, and quality materials to maintain our competitive edge. This dedication to professional development ensures that The Preschool at Forest Park remains at the forefront of enrichment classes industry innovations.</p>
+            <p class="content-text">Client relationships form the cornerstone of our business philosophy. We believe in transparent communication, realistic timelines, and honest pricing. Our team takes time to explain processes, answer questions, and provide updates throughout your project, ensuring you remain informed and confident in our progress.</p>
+            <p class="content-text">The scope of our services extends beyond standard enrichment classes work to include Full-Day Preschool Program, Half-Day Preschool Program, Before and After Care, Enrichment Classes, Parent-Child Playgroups, Summer STEM Camp, Nature Exploration Camp, Kindergarten Readiness Program, Drop-In Care. This comprehensive approach allows us to address complex projects that require multiple specialties, providing seamless coordination and consistent quality across all aspects of your project.</p>
+            <p class="content-text">The Preschool at Forest Park proudly serves communities throughout Mukilteo, Lynnwood, Marysville, Mill Creek, Edmonds, Lake Stevens, Snohomish, Bothell, Silver Firs, Shoreline, adapting our services to meet local needs and preferences. Our geographic reach, combined with our commitment to personalized service, makes us the ideal choice for enrichment classes projects of any scale or complexity.</p>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="section">
+        <div class="container">
+            <h2>Find The Preschool at Forest Park in Mill Creek, WA</h2>
+            
+    <div class="map-container" style="margin: 2rem 0; width: 100%; height: 350px; border: 2px solid #000000; border-radius: 0;">
+      <iframe 
+        src="https://maps.google.com/maps?q=The%20Preschool%20at%20Forest%20Park%20Mill%20Creek%2C%20WA&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Location of The Preschool at Forest Park in Mill Creek, WA">
+      </iframe>
+    </div>
+  
+        </div>
+    </section>
+    
+    <!-- Why Choose Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Why Choose The Preschool at Forest Park for Enrichment Classes?</h2>
+            <div class="benefits-grid">
+                
+                <div class="benefit-card">
+                    <h3>Forest-Integrated Learning Environment</h3>
+                    <p>Located adjacent to North Creek Forest, our preschool incorporates daily outdoor education and nature exploration into the curriculum. Children learn through hands-on experiences with local flora and fauna, developing both environmental awareness and core academic skills in a unique Pacific Northwest setting.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Dual-Language Development Program</h3>
+                    <p>Our bilingual teachers conduct activities in both English and Spanish throughout the day, taking advantage of young children's natural language acquisition abilities. This early exposure to dual languages supports cognitive development and prepares children for our increasingly multicultural Mill Creek community.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>STEAM Lab with Weekly Projects</h3>
+                    <p>Our dedicated STEAM laboratory features age-appropriate technology and materials for weekly science experiments, engineering challenges, and art projects. Children engage in hands-on learning like building simple machines, conducting safe chemistry experiments, and creating digital art.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Farm-to-Table Nutrition Program</h3>
+                    <p>Partnership with local Mill Creek farmers provides fresh, seasonal ingredients for our on-site kitchen. Children participate in maintaining our learning garden, cooking classes, and understanding nutrition, while enjoying healthy, house-made meals and snacks daily.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Flexible Extended Hours</h3>
+                    <p>Accommodating local tech industry schedules, we offer extended hours from 6:30 AM to 6:30 PM, with flexible drop-off and pickup times. Parents working in Seattle, Bellevue, or local Mill Creek businesses can maintain their work schedules without rushing.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Low Student-Teacher Ratio</h3>
+                    <p>We maintain a 6:1 student-teacher ratio, exceeding state requirements and allowing for more individual attention and customized learning support. Each class has a lead teacher with a degree in Early Childhood Education and an experienced teaching assistant.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works -->
+    <section class="section">
+        <div class="container">
+            <h2>How The Preschool at Forest Park's Enrichment Classes Process Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Free Consultation</h3>
+                    <p>Contact The Preschool at Forest Park for your complimentary enrichment classes assessment and detailed quote. We'll evaluate your needs and provide expert recommendations.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Custom Solution Design</h3>
+                    <p>Our experts design a tailored enrichment classes plan that fits your specific requirements, timeline, and budget constraints.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Professional Execution</h3>
+                    <p>The Preschool at Forest Park's licensed professionals execute your enrichment classes project with precision, keeping you informed every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <h2>What Our Enrichment Classes Customers Say</h2>
+            <div class="testimonials">
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">My daughter has been going to Forest Park's preschool program for about 8 months now and I couldn't be happier with our choice. Miss Julie's pre-K class is wonderful - they do so much more than just ABC's and numbers. Last week they did this amazing science project with growing beans, and my daughter came home so excited to check on her plant every day. The only minor thing is that pickup can get a bit crowded around 5:30, but honestly that's just because so many families love this place. Worth every penny!</div>
+                    <div class="testimonial-author">– Sarah K., Mill Creek</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">We tried the summer camp program at Forest Park last year. While the activities were good and my son had fun, I wish they had better communication about schedule changes. There were a couple times when planned activities got switched around and we only found out after the fact. Staff is friendly though and they really keep the kids engaged with outdoor activities. 4 stars because despite the communication hiccups, my kid wants to go back this summer.</div>
+                    <div class="testimonial-author">– Miguel R., Bothell</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">Been meaning to write this review forever! My twins started in the toddler program back in 2021 and now they're in the pre-K class. Can't say enough good things about how they handle different learning styles - one of my boys is super active and the other is more reserved, but somehow the teachers manage to engage them both. Ms. Rachel is especially amazing with the shy kids. The enrichment classes are great too - we do the Tuesday afternoon art class and my boys love it. Yeah it's not the cheapest option around here but you get what you pay for tbh.</div>
+                    <div class="testimonial-author">– Jenny W., Mill Creek</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section with Related Searches -->
+    <section class="section">
+        <div class="container">
+            <h2>Frequently Asked Questions About Enrichment Classes</h2>
+            <div class="faq-container">
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What are your hours of operation and what age groups do you accept?</summary>
+                        <div class="faq-answer">We operate Monday through Friday from 7:00 AM to 6:00 PM. Our preschool program accepts children ages 2.5 to 5 years old, while our summer camp program serves children ages 3-6. We offer both full-time and part-time enrollment options, with a minimum of 2 days per week attendance required. All children must be potty trained before entering our 3+ programs, though we do accept children still working on potty training in our 2.5-year-old class.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What is your current monthly tuition rate and what does it include?</summary>
+                        <div class="faq-answer">Monthly tuition for full-time enrollment (M-F, 7 AM-6 PM) is $1,495. Part-time options start at $725 for 2 days per week. Tuition includes all daily activities, enrichment classes (music, art, and movement), healthy snacks twice daily, and access to our secure parent communication app. We offer a 10% sibling discount and a 5% discount for paying quarterly. Registration fee is $150 annually, with summer camp having a separate $100 registration fee. Please note that lunch is not included and must be provided from home.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What curriculum do you follow and what makes your program unique?</summary>
+                        <div class="faq-answer">We follow a play-based, developmentally appropriate curriculum that aligns with Washington State Early Learning Guidelines. Our program is unique because we incorporate daily nature-based learning activities in our adjacent Forest Park location, weather permitting. We maintain a low student-to-teacher ratio (1:7 for preschool, 1:5 for younger groups) and our teachers all hold degrees in Early Childhood Education or related fields. Our curriculum includes weekly themes, STEAM activities, language development, and social-emotional learning components. We're also one of the few preschools in Mill Creek offering both Mandarin and Spanish language exposure.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What is your illness policy and how do you handle COVID-19 protocols?</summary>
+                        <div class="faq-answer">We follow strict health guidelines to maintain a safe environment. Children must be fever-free (without medication) for 24 hours before returning to school. For COVID-19, we follow current Snohomish County Health Department guidelines, which include required isolation periods for positive cases and exposure protocols. We maintain enhanced cleaning procedures, regular hand washing schedules, and air purifiers in each classroom. If your child shows symptoms during the day, we'll contact you for immediate pickup. We provide daily health screenings and maintain transparent communication with families about any health concerns.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What does your summer camp program include and when can we register?</summary>
+                        <div class="faq-answer">Our summer camp runs from mid-June through late August, with weekly themed sessions. Each week includes water play, outdoor adventures in Forest Park, art projects, science experiments, and special guests. Camp hours are 9 AM-4 PM with extended care available (7 AM-6 PM) for an additional fee. Weekly rates are $375 for full-day camp, with extended care costing an additional $85 per week. Summer camp registration opens February 1st for current families and February 15th for new families. Spots fill quickly, especially for our popular themes like 'Forest Explorers' and 'Junior Scientists'. A non-refundable deposit of $100 per week is required to hold your spot.</div>
+                    </details>
+                </div>
+                
+            </div>
+            
+        <div class="related-searches-text" style="margin-top: 1.5rem; padding: 1rem; background: #f8f9fa; border-left: 3px solid #FFD700; font-size: 0.9rem; color: #666;">
+          <strong>Related Searches:</strong> preschool near me, Everett WA summer camp for kids, best preschool in Everett, affordable preschool Everett WA, Everett before and after school care, kindergarten readiness program Everett, nature camp for preschoolers near Everett
+        </div>
+      
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready for Expert Enrichment Classes Services in Mill Creek, WA?</h2>
+            <p>Contact The Preschool at Forest Park today for your free consultation and experience the difference that professional enrichment classes services make.</p>
+            <a href="https://forestparkpreschool.com//contact" class="cta-button">Contact The Preschool at Forest Park Today</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Preschool at Forest Park. All rights reserved.</p>
+            <p>Licensed & Insured Enrichment Classes Services in Mill Creek, WA</p>
+            <p><a href="https://forestparkpreschool.com/">Visit The Preschool at Forest Park</a> | Professional enrichment classes solutions since 2015</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
