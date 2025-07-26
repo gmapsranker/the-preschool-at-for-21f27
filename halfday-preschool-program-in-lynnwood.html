@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" c>
+    <title>Half-Day Preschool Program Services in Lynnwood, WA | The Preschool at Forest Park</title>
+    <meta name="description" c>
+    <meta name="keywords" c>
+    <meta name="robots" c>
+    <meta name="author" c>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" c>
+    <meta property="og:url" c>
+    <meta property="og:title" c>
+    <meta property="og:description" c>
+    <meta property="og:site_name" c>
+    
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" c>
+    <meta property="twitter:url" c>
+    <meta property="twitter:title" c>
+    <meta property="twitter:description" c>
+    
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://forestparkpreschool.com//halfday-preschool-program-in-lynnwood">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FAQ Structured Data -->
+    
+    
+    <style>
+        
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #000000;
+        background: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+    
+    @media (min-width: 640px) {
+        .container {
+            padding: 0 2.5rem;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .container {
+            padding: 0 4rem;
+        }
+    }
+    
+    /* Burger Menu Styles */
+    .burger-menu {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        background: #FFD700;
+        border: 2px solid #000000;
+        border-radius: 0;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    
+    .burger-menu:hover {
+        background: #000000;
+    }
+    
+    .burger-menu:hover .burger-line {
+        background: #FFD700;
+    }
+    
+    .burger-line {
+        width: 25px;
+        height: 3px;
+        background: #000000;
+        margin: 2px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100vh;
+        background: #ffffff;
+        border-right: 2px solid #000000;
+        z-index: 999;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        padding-top: 80px;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu h3 {
+        padding: 0 20px 10px 20px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #000000;
+        border-bottom: 1px solid #cccccc;
+        margin-bottom: 20px;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px 20px;
+        color: #000000;
+        text-decoration: none;
+        border-bottom: 1px solid #f0f0f0;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .nav-link:hover {
+        background: #FFD700;
+    }
+    
+    .nav-link.active {
+        background: #FFD700;
+        color: #000000;
+    }
+    
+    .nav-city, .nav-service {
+        font-weight: 600;
+        font-size: 1rem;
+        display: block;
+    }
+    
+    .nav-location {
+        font-size: 0.875rem;
+        color: #666666;
+        margin-top: 2px;
+        display: block;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    header {
+        background: #FFD700;
+        color: #000000;
+        padding: 1.5rem 0;
+        border-bottom: 2px solid #000000;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    .logo {
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+        font-weight: 700;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+    }
+  
+        
+        /* Hero Section */
+        .hero {
+            background: #ffffff;
+            padding: clamp(2rem, 8vw, 4rem) 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .subtitle {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #333333;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button, .button {
+            background: #FFD700;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: clamp(12px, 3vw, 16px) clamp(20px, 5vw, 32px);
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 600;
+            font-size: clamp(14px, 3vw, 16px);
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .cta-button:hover, .button:hover {
+            background: #000000;
+            color: #FFD700;
+        }
+        
+        /* Sections */
+        .section {
+            padding: clamp(2rem, 6vw, 3rem) 0;
+        }
+        
+        .section + .section {
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .section h2 {
+            font-size: clamp(1.25rem, 4vw, 2rem);
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: clamp(1.5rem, 4vw, 2rem);
+            line-height: 1.2;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        /* Content text improvements */
+        .content-text {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: #000000;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .content-text {
+                padding: 0 2rem;
+            }
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1.5rem, 4vw, 2rem) 0;
+        }
+        
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .benefit-card {
+            background: #FFD700;
+            padding: clamp(1.5rem, 4vw, 2rem);
+            border-radius: 0;
+            border: 2px solid #000000;
+            transition: none;
+        }
+        
+        .benefit-card h3 {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        
+        .benefit-card p {
+            color: #000000;
+            line-height: 1.6;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: left;
+        }
+        
+        /* Steps */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1.5rem, 4vw, 2rem) 0;
+        }
+        
+        .step {
+            text-align: center;
+            padding: clamp(1.5rem, 4vw, 2rem);
+            background: #FFD700;
+            border-radius: 0;
+            border: 2px solid #000000;
+        }
+        
+        .step-number {
+            background: #000000;
+            color: #FFD700;
+            width: clamp(2.5rem, 8vw, 3rem);
+            height: clamp(2.5rem, 8vw, 3rem);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            margin: 0 auto 1.5rem auto;
+        }
+        
+        .step h3 {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #000000;
+            line-height: 1.3;
+            text-align: center;
+        }
+        
+        .step p {
+            color: #000000;
+            line-height: 1.6;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: left;
+        }
+        
+        /* Testimonials - Fixed quote styling */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1.5rem, 4vw, 2rem) 0;
+        }
+        
+        .testimonial {
+            background: #FFD700;
+            padding: clamp(2rem, 5vw, 2.5rem);
+            border-radius: 0;
+            border: 2px solid #000000;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #333333;
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-weight: 700;
+            opacity: 0.7;
+            z-index: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            line-height: 1.6;
+            color: #000000;
+            text-align: left;
+            position: relative;
+            z-index: 2;
+            margin-top: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #000000;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: center;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 2px solid #000000;
+            border-radius: 0;
+            overflow: hidden;
+            background: #ffffff;
+        }
+        
+        .faq-item details {
+            cursor: pointer;
+        }
+        
+        .faq-item summary {
+            background: #ffffff;
+            padding: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 600;
+            color: #000000;
+            border-bottom: 1px solid #000000;
+            cursor: pointer;
+            list-style: none;
+            transition: background-color 0.3s ease;
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            line-height: 1.4;
+            text-align: left;
+        }
+        
+        .faq-item summary:hover {
+            background: #f5f5f5;
+        }
+        
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .faq-item summary::after {
+            content: '+';
+            float: right;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #000000;
+            font-weight: 700;
+        }
+        
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+        
+        .faq-answer {
+            padding: clamp(1rem, 3vw, 1.5rem);
+            background: #ffffff;
+            line-height: 1.6;
+            color: #000000;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: left;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: #ffffff;
+            color: #000000;
+            padding: clamp(2rem, 6vw, 4rem) 0;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .final-cta h2 {
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta p {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            margin-bottom: 2rem;
+            opacity: 1;
+            line-height: 1.5;
+        }
+        
+        .final-cta .cta-button {
+            background: #FFD700;
+            color: #000000;
+            border: 2px solid #000000;
+        }
+        
+        .final-cta .cta-button:hover {
+            background: #000000;
+            color: #FFD700;
+        }
+        
+        /* Footer */
+        footer {
+            background: #ffffff;
+            color: #000000;
+            padding: clamp(2rem, 5vw, 3rem) 0;
+            text-align: center;
+            border-top: 1px solid #cccccc;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            opacity: 1;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            line-height: 1.5;
+        }
+        
+        footer a {
+            color: #000000;
+            text-decoration: underline;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            .hero { padding: 2rem 0; }
+            .section { padding: 2rem 0; }
+            .steps { grid-template-columns: 1fr; }
+            .testimonials { grid-template-columns: 1fr; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            
+            .nav-menu {
+                width: 280px;
+                left: -280px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container { padding: 0 10px; }
+            .hero { padding: 1.5rem 0; }
+            .section { padding: 1.5rem 0; }
+            .benefit-card, .step, .testimonial { padding: 1rem; }
+        }
+    </style>
+    <meta name="google-site-verification" content="0329356589488d40c3b3bcb64dd4b49e" />
+    <meta name="google-site-verification" content="fbc9f2b9da6c9d97d5f6ad77485a466f" />
+  </head>
+<body>
+    <!-- Burger Menu -->
+    <div class="burger-menu" >
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <h3>All Preschool and Summer Camp Pages</h3>
+        
+    <a href="fullday-preschool-program-in-mukilteo.html" class="nav-link" data-page="fullday-preschool-program-in-mukilteo.html">
+      <span class="nav-city">Full-Day Preschool Program</span>
+      <small class="nav-location">Mukilteo</small>
+    </a>
+  
+    <a href="halfday-preschool-program-in-lynnwood.html" class="nav-link active" data-page="halfday-preschool-program-in-lynnwood.html">
+      <span class="nav-city">Half-Day Preschool Program</span>
+      <small class="nav-location">Lynnwood</small>
+    </a>
+  
+    <a href="before-and-after-care-in-marysville.html" class="nav-link" data-page="before-and-after-care-in-marysville.html">
+      <span class="nav-city">Before and After Care</span>
+      <small class="nav-location">Marysville</small>
+    </a>
+  
+    <a href="enrichment-classes-in-mill-creek.html" class="nav-link" data-page="enrichment-classes-in-mill-creek.html">
+      <span class="nav-city">Enrichment Classes</span>
+      <small class="nav-location">Mill Creek</small>
+    </a>
+  
+    <a href="parentchild-playgroups-in-edmonds.html" class="nav-link" data-page="parentchild-playgroups-in-edmonds.html">
+      <span class="nav-city">Parent-Child Playgroups</span>
+      <small class="nav-location">Edmonds</small>
+    </a>
+  
+    </nav>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" ></div>
+    
+    <header>
+        <div class="container">
+            <a href="https://forestparkpreschool.com/" class="logo">The Preschool at Forest Park</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Expert Half-Day Preschool Program Services in Lynnwood, WA | The Preschool at Forest Park</h1>
+            <p class="subtitle">Professional half-day preschool program services in Lynnwood, WA. The Preschool at Forest Park delivers exceptional results with licensed professionals, modern equipment, and 100% satisfaction guarantee.</p>
+            <a href="https://forestparkpreschool.com//contact" class="cta-button">Get Your Free Half-Day Preschool Program Quote Today</a>
+        </div>
+    </section>
+    
+    <!-- AI Generated Image Section -->
+    
+    
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <p class="content-text">Professional half-day preschool program services in Lynnwood, WA require expertise, reliability, and attention to detail – qualities that define The Preschool at Forest Park. Our clients choose us because we consistently deliver superior results while maintaining competitive pricing and exceptional customer service standards.</p>
+            <p class="content-text">Our comprehensive half-day preschool program solutions address both immediate needs and long-term objectives. We evaluate each project holistically, considering factors like efficiency, durability, and future maintenance requirements. This thorough approach ensures you receive maximum value from your investment.</p>
+            <p class="content-text">Experience matters in half-day preschool program work, and The Preschool at Forest Park brings years of hands-on expertise to every project. Our skilled professionals stay current with industry developments, emerging technologies, and best practices to provide cutting-edge solutions that meet today's demanding standards.</p>
+            <p class="content-text">We understand that half-day preschool program projects can be disruptive, which is why we prioritize efficiency and minimal interference with your daily routine. Our team works diligently to complete projects on schedule while maintaining the highest quality standards and leaving your space clean and organized.</p>
+            <p class="content-text">In addition to core half-day preschool program services, we provide related solutions including Full-Day Preschool Program, Half-Day Preschool Program, Before and After Care, Enrichment Classes, Parent-Child Playgroups, Summer STEM Camp, Nature Exploration Camp, Kindergarten Readiness Program, Drop-In Care. This expanded capability allows us to serve as your single source for comprehensive project management, reducing coordination challenges and ensuring seamless integration of all work components.</p>
+            <p class="content-text">The Preschool at Forest Park serves clients throughout Mukilteo, Lynnwood, Marysville, Mill Creek, Edmonds, Lake Stevens, Snohomish, Bothell, Silver Firs, Shoreline, offering consistent quality and responsive service regardless of location. Our reputation for reliability and professionalism has made us the preferred choice for discerning customers who demand excellence in half-day preschool program services.</p>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="section">
+        <div class="container">
+            <h2>Find The Preschool at Forest Park in Lynnwood, WA</h2>
+            
+    <div class="map-container" style="margin: 2rem 0; width: 100%; height: 350px; border: 2px solid #000000; border-radius: 0;">
+      <iframe 
+        src="https://maps.google.com/maps?q=The%20Preschool%20at%20Forest%20Park%20Lynnwood%2C%20WA&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Location of The Preschool at Forest Park in Lynnwood, WA">
+      </iframe>
+    </div>
+  
+        </div>
+    </section>
+    
+    <!-- Why Choose Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Why Choose The Preschool at Forest Park for Half-Day Preschool Program?</h2>
+            <div class="benefits-grid">
+                
+                <div class="benefit-card">
+                    <h3>Direct Forest Park Access</h3>
+                    <p>Our facility backs directly onto Forest Park, allowing children daily supervised access to 53 acres of natural woodland trails and outdoor learning spaces. This unique location enables hands-on nature education and physical activity in a safe, controlled environment that most urban preschools can't offer.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Certified Nature-Based Curriculum</h3>
+                    <p>All lead teachers are certified in both early childhood education and nature-based learning through the Washington Nature Preschool Association. Our program integrates traditional preschool foundations with outdoor exploration, seasonal activities, and environmental awareness specifically designed for ages 3-5.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Small 1:6 Teacher-Student Ratio</h3>
+                    <p>We maintain one of Lynnwood's lowest teacher-to-student ratios at 1:6, compared to the state standard of 1:10. This allows for more individual attention, better safety supervision during outdoor activities, and personalized learning support for each child's developmental needs.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Flexible Half-Day Scheduling</h3>
+                    <p>Choose from morning (8:30-11:30) or afternoon (12:30-3:30) sessions with the option to combine days for extended care. Our flexible scheduling system allows parents to adjust attendance days monthly, accommodating changing work schedules common in the Seattle metro area.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Real-Time Parent Connection App</h3>
+                    <p>Our custom mobile app provides secure, real-time updates of your child's daily activities, photos of learning moments, and instant messaging with teachers. Parents can track their child's development milestones and coordinate with teachers without waiting for quarterly conferences.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Local Emergency Response Partnership</h3>
+                    <p>Exclusive partnership with Lynnwood Fire Station 15 (located 0.3 miles away) ensures rapid emergency response and regular safety training for our staff. Monthly visits from firefighters and EMTs help children learn about community helpers while establishing emergency preparedness.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works -->
+    <section class="section">
+        <div class="container">
+            <h2>How The Preschool at Forest Park's Half-Day Preschool Program Process Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Free Consultation</h3>
+                    <p>Contact The Preschool at Forest Park for your complimentary half-day preschool program assessment and detailed quote. We'll evaluate your needs and provide expert recommendations.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Custom Solution Design</h3>
+                    <p>Our experts design a tailored half-day preschool program plan that fits your specific requirements, timeline, and budget constraints.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Professional Execution</h3>
+                    <p>The Preschool at Forest Park's licensed professionals execute your half-day preschool program project with precision, keeping you informed every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <h2>What Our Half-Day Preschool Program Customers Say</h2>
+            <div class="testimonials">
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">Our daughter has been at Forest Park for almost 2 years now and we couldn't be happier with the experience. Miss Julie and Miss Maria are so patient and caring - they really take the time to understand each kid's personality. The half-day program is perfect for us since I work from home in the afternoons. Love how they incorporate both structured learning time and plenty of free play. Only minor complaint is that pickup can get a bit chaotic when all the parents arrive at once, but that's pretty normal for preschools I guess.</div>
+                    <div class="testimonial-author">– Sarah K., Lynnwood</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">Best decision we made for our son! He was really shy at first but the teachers helped him come out of his shell. They do fun art projects every week and my fridge is covered with his masterpieces lol. The summer camp program was great too - they did water play days which he absolutely loved. Wish they had full day options but the morning program works ok with our schedule.</div>
+                    <div class="testimonial-author">– David Chen, Lynnwood</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">My daughter just finished her first year at Forest Park and I'm amazed at how much she's learned. The classroom setup is really engaging and they do a great job mixing educational activities with playtime. Ms. Rebecca is fantastic with the kids - so patient and always gives me detailed updates about how my little one is doing. They could use more outdoor equipment but the teachers make the most of what they have. Worth the 15 min drive from Edmonds!</div>
+                    <div class="testimonial-author">– Aisha M., Edmonds</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section with Related Searches -->
+    <section class="section">
+        <div class="container">
+            <h2>Frequently Asked Questions About Half-Day Preschool Program</h2>
+            <div class="faq-container">
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What are your preschool hours and program options?</summary>
+                        <div class="faq-answer">We offer half-day programs running Monday through Friday with two schedule options: Morning Session (8:30 AM - 11:30 AM) or Afternoon Session (12:30 PM - 3:30 PM). Families can choose between 2-day (T/Th), 3-day (M/W/F), or 5-day programs. Our summer camp program runs in July and August with flexible weekly enrollment options.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What are your current tuition rates for the preschool program?</summary>
+                        <div class="faq-answer">Our 2023-24 monthly tuition rates are: 2-day program: $295/month, 3-day program: $395/month, and 5-day program: $595/month. We require a $150 non-refundable registration fee and first month's tuition to secure your child's spot. We offer a 10% sibling discount for families with multiple children enrolled.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What age groups do you accept and what are your teacher-to-student ratios?</summary>
+                        <div class="faq-answer">We accept children ages 2.5 to 5 years old. Our classes are organized by age: Junior Preschool (2.5-3.5 years) and Senior Preschool (3.5-5 years). We maintain a 1:7 teacher-to-student ratio in our Junior Preschool and 1:10 ratio in our Senior Preschool, exceeding Washington state licensing requirements. Maximum class sizes are 14 students for Junior and 20 for Senior classes.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>Are you licensed and what are your teachers' qualifications?</summary>
+                        <div class="faq-answer">Yes, we are fully licensed by the Washington State Department of Children, Youth, and Families (DCYF). All our lead teachers hold degrees in Early Childhood Education or related fields and have a minimum of 3 years teaching experience. Our staff members are CPR/First Aid certified and complete ongoing professional development throughout the year. We also undergo annual health and safety inspections.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What is your enrollment process and is there a waitlist?</summary>
+                        <div class="faq-answer">Start by scheduling a tour of our facility in Lynnwood by calling or emailing us. After the tour, you can complete our online enrollment application. Currently enrolled families have priority registration in January for the following school year, then we open registration to the public in February. We do maintain a waitlist when classes are full, and spots are offered in the order applications are received. A $50 waitlist fee is required, which is applied to your registration fee if a spot becomes available.</div>
+                    </details>
+                </div>
+                
+            </div>
+            
+        <div class="related-searches-text" style="margin-top: 1.5rem; padding: 1rem; background: #f8f9fa; border-left: 3px solid #FFD700; font-size: 0.9rem; color: #666;">
+          <strong>Related Searches:</strong> preschool near me, Everett WA summer camp for kids, best preschool in Everett, affordable preschool Everett WA, Everett before and after school care, kindergarten readiness program Everett, nature camp for preschoolers near Everett
+        </div>
+      
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready for Expert Half-Day Preschool Program Services in Lynnwood, WA?</h2>
+            <p>Contact The Preschool at Forest Park today for your free consultation and experience the difference that professional half-day preschool program services make.</p>
+            <a href="https://forestparkpreschool.com//contact" class="cta-button">Contact The Preschool at Forest Park Today</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Preschool at Forest Park. All rights reserved.</p>
+            <p>Licensed & Insured Half-Day Preschool Program Services in Lynnwood, WA</p>
+            <p><a href="https://forestparkpreschool.com/">Visit The Preschool at Forest Park</a> | Professional half-day preschool program solutions since 2015</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
