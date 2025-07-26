@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" c>
+    <title>Before and After Care Services in Marysville, WA | The Preschool at Forest Park</title>
+    <meta name="description" c>
+    <meta name="keywords" c>
+    <meta name="robots" c>
+    <meta name="author" c>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" c>
+    <meta property="og:url" c>
+    <meta property="og:title" c>
+    <meta property="og:description" c>
+    <meta property="og:site_name" c>
+    
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" c>
+    <meta property="twitter:url" c>
+    <meta property="twitter:title" c>
+    <meta property="twitter:description" c>
+    
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://forestparkpreschool.com//before-and-after-care-in-marysville">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FAQ Structured Data -->
+    
+    
+    <style>
+        
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #000000;
+        background: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+    
+    @media (min-width: 640px) {
+        .container {
+            padding: 0 2.5rem;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .container {
+            padding: 0 4rem;
+        }
+    }
+    
+    /* Burger Menu Styles */
+    .burger-menu {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        background: #FFD700;
+        border: 2px solid #000000;
+        border-radius: 0;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    
+    .burger-menu:hover {
+        background: #000000;
+    }
+    
+    .burger-menu:hover .burger-line {
+        background: #FFD700;
+    }
+    
+    .burger-line {
+        width: 25px;
+        height: 3px;
+        background: #000000;
+        margin: 2px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100vh;
+        background: #ffffff;
+        border-right: 2px solid #000000;
+        z-index: 999;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        padding-top: 80px;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu h3 {
+        padding: 0 20px 10px 20px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #000000;
+        border-bottom: 1px solid #cccccc;
+        margin-bottom: 20px;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px 20px;
+        color: #000000;
+        text-decoration: none;
+        border-bottom: 1px solid #f0f0f0;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .nav-link:hover {
+        background: #FFD700;
+    }
+    
+    .nav-link.active {
+        background: #FFD700;
+        color: #000000;
+    }
+    
+    .nav-city, .nav-service {
+        font-weight: 600;
+        font-size: 1rem;
+        display: block;
+    }
+    
+    .nav-location {
+        font-size: 0.875rem;
+        color: #666666;
+        margin-top: 2px;
+        display: block;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    header {
+        background: #FFD700;
+        color: #000000;
+        padding: 1.5rem 0;
+        border-bottom: 2px solid #000000;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    .logo {
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+        font-weight: 700;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+    }
+  
+        
+        /* Hero Section */
+        .hero {
+            background: #ffffff;
+            padding: clamp(2rem, 8vw, 4rem) 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .subtitle {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #333333;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button, .button {
+            background: #FFD700;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: clamp(12px, 3vw, 16px) clamp(20px, 5vw, 32px);
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 600;
+            font-size: clamp(14px, 3vw, 16px);
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .cta-button:hover, .button:hover {
+            background: #000000;
+            color: #FFD700;
+        }
+        
+        /* Sections */
+        .section {
+            padding: clamp(2rem, 6vw, 3rem) 0;
+        }
+        
+        .section + .section {
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .section h2 {
+            font-size: clamp(1.25rem, 4vw, 2rem);
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: clamp(1.5rem, 4vw, 2rem);
+            line-height: 1.2;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        /* Content text improvements */
+        .content-text {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: #000000;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .content-text {
+                padding: 0 2rem;
+            }
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1.5rem, 4vw, 2rem) 0;
+        }
+        
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .benefit-card {
+            background: #FFD700;
+            padding: clamp(1.5rem, 4vw, 2rem);
+            border-radius: 0;
+            border: 2px solid #000000;
+            transition: none;
+        }
+        
+        .benefit-card h3 {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        
+        .benefit-card p {
+            color: #000000;
+            line-height: 1.6;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: left;
+        }
+        
+        /* Steps */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1.5rem, 4vw, 2rem) 0;
+        }
+        
+        .step {
+            text-align: center;
+            padding: clamp(1.5rem, 4vw, 2rem);
+            background: #FFD700;
+            border-radius: 0;
+            border: 2px solid #000000;
+        }
+        
+        .step-number {
+            background: #000000;
+            color: #FFD700;
+            width: clamp(2.5rem, 8vw, 3rem);
+            height: clamp(2.5rem, 8vw, 3rem);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            margin: 0 auto 1.5rem auto;
+        }
+        
+        .step h3 {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #000000;
+            line-height: 1.3;
+            text-align: center;
+        }
+        
+        .step p {
+            color: #000000;
+            line-height: 1.6;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: left;
+        }
+        
+        /* Testimonials - Fixed quote styling */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1.5rem, 4vw, 2rem) 0;
+        }
+        
+        .testimonial {
+            background: #FFD700;
+            padding: clamp(2rem, 5vw, 2.5rem);
+            border-radius: 0;
+            border: 2px solid #000000;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #333333;
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-weight: 700;
+            opacity: 0.7;
+            z-index: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            line-height: 1.6;
+            color: #000000;
+            text-align: left;
+            position: relative;
+            z-index: 2;
+            margin-top: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #000000;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: center;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 2px solid #000000;
+            border-radius: 0;
+            overflow: hidden;
+            background: #ffffff;
+        }
+        
+        .faq-item details {
+            cursor: pointer;
+        }
+        
+        .faq-item summary {
+            background: #ffffff;
+            padding: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 600;
+            color: #000000;
+            border-bottom: 1px solid #000000;
+            cursor: pointer;
+            list-style: none;
+            transition: background-color 0.3s ease;
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            line-height: 1.4;
+            text-align: left;
+        }
+        
+        .faq-item summary:hover {
+            background: #f5f5f5;
+        }
+        
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .faq-item summary::after {
+            content: '+';
+            float: right;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #000000;
+            font-weight: 700;
+        }
+        
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+        
+        .faq-answer {
+            padding: clamp(1rem, 3vw, 1.5rem);
+            background: #ffffff;
+            line-height: 1.6;
+            color: #000000;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            text-align: left;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: #ffffff;
+            color: #000000;
+            padding: clamp(2rem, 6vw, 4rem) 0;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .final-cta h2 {
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta p {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            margin-bottom: 2rem;
+            opacity: 1;
+            line-height: 1.5;
+        }
+        
+        .final-cta .cta-button {
+            background: #FFD700;
+            color: #000000;
+            border: 2px solid #000000;
+        }
+        
+        .final-cta .cta-button:hover {
+            background: #000000;
+            color: #FFD700;
+        }
+        
+        /* Footer */
+        footer {
+            background: #ffffff;
+            color: #000000;
+            padding: clamp(2rem, 5vw, 3rem) 0;
+            text-align: center;
+            border-top: 1px solid #cccccc;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            opacity: 1;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            line-height: 1.5;
+        }
+        
+        footer a {
+            color: #000000;
+            text-decoration: underline;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            .hero { padding: 2rem 0; }
+            .section { padding: 2rem 0; }
+            .steps { grid-template-columns: 1fr; }
+            .testimonials { grid-template-columns: 1fr; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            
+            .nav-menu {
+                width: 280px;
+                left: -280px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container { padding: 0 10px; }
+            .hero { padding: 1.5rem 0; }
+            .section { padding: 1.5rem 0; }
+            .benefit-card, .step, .testimonial { padding: 1rem; }
+        }
+    </style>
+    <meta name="google-site-verification" content="0329356589488d40c3b3bcb64dd4b49e" />
+    <meta name="google-site-verification" content="fbc9f2b9da6c9d97d5f6ad77485a466f" />
+  </head>
+<body>
+    <!-- Burger Menu -->
+    <div class="burger-menu" >
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <h3>All Preschool and Summer Camp Pages</h3>
+        
+    <a href="fullday-preschool-program-in-mukilteo.html" class="nav-link" data-page="fullday-preschool-program-in-mukilteo.html">
+      <span class="nav-city">Full-Day Preschool Program</span>
+      <small class="nav-location">Mukilteo</small>
+    </a>
+  
+    <a href="halfday-preschool-program-in-lynnwood.html" class="nav-link" data-page="halfday-preschool-program-in-lynnwood.html">
+      <span class="nav-city">Half-Day Preschool Program</span>
+      <small class="nav-location">Lynnwood</small>
+    </a>
+  
+    <a href="before-and-after-care-in-marysville.html" class="nav-link active" data-page="before-and-after-care-in-marysville.html">
+      <span class="nav-city">Before and After Care</span>
+      <small class="nav-location">Marysville</small>
+    </a>
+  
+    <a href="enrichment-classes-in-mill-creek.html" class="nav-link" data-page="enrichment-classes-in-mill-creek.html">
+      <span class="nav-city">Enrichment Classes</span>
+      <small class="nav-location">Mill Creek</small>
+    </a>
+  
+    <a href="parentchild-playgroups-in-edmonds.html" class="nav-link" data-page="parentchild-playgroups-in-edmonds.html">
+      <span class="nav-city">Parent-Child Playgroups</span>
+      <small class="nav-location">Edmonds</small>
+    </a>
+  
+    </nav>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" ></div>
+    
+    <header>
+        <div class="container">
+            <a href="https://forestparkpreschool.com/" class="logo">The Preschool at Forest Park</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Expert Before and After Care Services in Marysville, WA | The Preschool at Forest Park</h1>
+            <p class="subtitle">Professional before and after care services in Marysville, WA. The Preschool at Forest Park delivers exceptional results with licensed professionals, modern equipment, and 100% satisfaction guarantee.</p>
+            <a href="https://forestparkpreschool.com//contact" class="cta-button">Get Your Free Before and After Care Quote Today</a>
+        </div>
+    </section>
+    
+    <!-- AI Generated Image Section -->
+    
+    
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <p class="content-text">When you need reliable before and after care services in Marysville, WA, The Preschool at Forest Park delivers solutions that actually work. Our approach combines proven methods with innovative techniques to tackle even the most challenging projects. Every client receives personalized attention because we understand that your before and after care needs are unique to your situation.</p>
+            <p class="content-text">What sets The Preschool at Forest Park apart is our commitment to thorough preparation and execution. We take time to understand your specific requirements, assess the scope of work, and develop a tailored strategy that fits your timeline and budget. Our team brings extensive experience across diverse before and after care projects, ensuring we can handle everything from routine maintenance to complex installations.</p>
+            <p class="content-text">Quality materials and professional craftsmanship form the foundation of our work. We source premium supplies and utilize industry-leading equipment to deliver results that exceed expectations. Our systematic approach includes detailed planning, skilled execution, and comprehensive follow-up to ensure lasting satisfaction.</p>
+            <p class="content-text">Beyond basic before and after care services, we offer complementary solutions including Full-Day Preschool Program, Half-Day Preschool Program, Before and After Care, Enrichment Classes, Parent-Child Playgroups, Summer STEM Camp, Nature Exploration Camp, Kindergarten Readiness Program, Drop-In Care. This comprehensive approach means you can rely on The Preschool at Forest Park for all your related needs, streamlining your project management and ensuring consistent quality across all work performed.</p>
+            <p class="content-text">Our service area encompasses Mukilteo, Lynnwood, Marysville, Mill Creek, Edmonds, Lake Stevens, Snohomish, Bothell, Silver Firs, Shoreline and beyond, bringing professional before and after care expertise directly to your location. We maintain flexible scheduling to accommodate your needs and provide clear communication throughout every phase of your project.</p>
+            <p class="content-text">The Preschool at Forest Park stands behind our work with solid warranties and ongoing support. We believe in building long-term relationships with our clients by consistently delivering exceptional results and responsive service when you need it most.</p>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="section">
+        <div class="container">
+            <h2>Find The Preschool at Forest Park in Marysville, WA</h2>
+            
+    <div class="map-container" style="margin: 2rem 0; width: 100%; height: 350px; border: 2px solid #000000; border-radius: 0;">
+      <iframe 
+        src="https://maps.google.com/maps?q=The%20Preschool%20at%20Forest%20Park%20Marysville%2C%20WA&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Location of The Preschool at Forest Park in Marysville, WA">
+      </iframe>
+    </div>
+  
+        </div>
+    </section>
+    
+    <!-- Why Choose Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Why Choose The Preschool at Forest Park for Before and After Care?</h2>
+            <div class="benefits-grid">
+                
+                <div class="benefit-card">
+                    <h3>Direct Access to Forest Park's Nature Trails</h3>
+                    <p>Our unique location adjacent to Forest Park means children spend time exploring 3+ miles of maintained nature trails weekly, supervised by certified outdoor education staff. This provides hands-on science learning and physical activity opportunities that indoor-only facilities cannot match.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Extended Hours for Boeing & Navy Families</h3>
+                    <p>Specifically designed to accommodate Marysville's Boeing and Naval Station Everett workforce, we offer extended care from 5:30 AM to 6:30 PM, aligning with early manufacturing shifts and military schedules. One of only two centers in Marysville providing pre-6 AM care.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Farm-to-Table Meal Program</h3>
+                    <p>Partnership with local Marysville farmers provides fresh, seasonal produce for our daily meal service. Children participate in our teaching garden, learning about food growth while enjoying nutritionist-designed meals prepared in our on-site kitchen.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Bilingual Spanish-English Curriculum</h3>
+                    <p>Full immersion Spanish language program integrated throughout daily activities, led by native speakers. Children naturally acquire second language skills through play, songs, and routine interactions - essential for Marysville's growing Hispanic community.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Emergency Backup Care Guarantee</h3>
+                    <p>Unique among local providers, we maintain three emergency spots daily for existing families facing unexpected schedule changes. Parents can request same-day care up until 7 AM, providing crucial flexibility for working families.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Real-Time Digital Updates via Custom App</h3>
+                    <p>Parents receive instant updates, photos, and activity logs through our secure mobile app. Unlike generic childcare apps, ours integrates with local emergency alerts and I-5 traffic updates to help parents plan pickup times effectively.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works -->
+    <section class="section">
+        <div class="container">
+            <h2>How The Preschool at Forest Park's Before and After Care Process Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Free Consultation</h3>
+                    <p>Contact The Preschool at Forest Park for your complimentary before and after care assessment and detailed quote. We'll evaluate your needs and provide expert recommendations.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Custom Solution Design</h3>
+                    <p>Our experts design a tailored before and after care plan that fits your specific requirements, timeline, and budget constraints.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Professional Execution</h3>
+                    <p>The Preschool at Forest Park's licensed professionals execute your before and after care project with precision, keeping you informed every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <h2>What Our Before and After Care Customers Say</h2>
+            <div class="testimonials">
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">My daughter has been going to The Preschool at Forest Park for about 8 months now and I couldn't be happier with our choice. The before/after care hours (6:30am-6pm) are perfect for my work schedule. Miss Sarah in the Butterfly room is amazing - she always sends me little updates and photos during the day. Only reason for 4 stars instead of 5 is that pickup can get a bit chaotic around 5pm when everyone arrives at once. But overall, great experience and my daughter loves it here!</div>
+                    <div class="testimonial-author">– Jennifer R., Marysville</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">Best decision we made for our son! Been here since September 2022. The summer camp program is fantastic - they do these weekly themes (my kid loved the science week where they made volcanoes). The staff actually remembers parents' names and takes time to tell you about your kid's day. Ms. Kelly is super patient with my picky eater. The facility is clean but not sterile - feels homey. Worth every penny.</div>
+                    <div class="testimonial-author">– Miguel Santos, Marysville</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">tbh was nervous about putting my twins in preschool but Forest Park has been great. they're really good about keeping siblings together when possible but also giving them chances to be independent. my girls have been going for 3 months and their vocabulary has exploded! they do actual learning activities not just babysitting. parking lot is kinda small tho and gets packed at dropoff. also wish they had more outdoor time when it rains (which is like... always in WA lol) but teachers are wonderful</div>
+                    <div class="testimonial-author">– Amy Chen-Williams, Marysville</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section with Related Searches -->
+    <section class="section">
+        <div class="container">
+            <h2>Frequently Asked Questions About Before and After Care</h2>
+            <div class="faq-container">
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What are your hours of operation and do you offer before/after care?</summary>
+                        <div class="faq-answer">Our preschool operates Monday through Friday from 6:30 AM to 6:00 PM. Our core preschool program runs from 9:00 AM to 3:30 PM, with before-care available starting at 6:30 AM and after-care until 6:00 PM at no additional cost. We understand many Marysville families commute to Boeing, Seattle, or Everett, so our extended hours are designed to accommodate working parents.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What are your current tuition rates and what's included?</summary>
+                        <div class="faq-answer">Full-time preschool tuition (M-F) is $1,275 per month, which includes before/after care, all meals (breakfast, lunch, and afternoon snack), and our full educational curriculum. Part-time options are available at $875/month for 3 days per week. Summer camp programs run June through August and are $325 per week. We offer a 10% sibling discount and accept DSHS subsidies for qualifying families.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What age groups do you accept and what are your teacher-to-student ratios?</summary>
+                        <div class="faq-answer">We accept children ages 2.5 to 5 years for our preschool program, and ages 5-12 for our summer camp. Our teacher-to-student ratios exceed state requirements: 1:7 for our younger preschoolers (ages 2.5-3), 1:10 for pre-K (ages 4-5), and 1:12 for summer camp. All lead teachers have Early Childhood Education degrees or equivalent certification, as required by Washington state licensing.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>How do I enroll my child and is there a waiting list?</summary>
+                        <div class="faq-answer">To enroll, first schedule a tour of our facility by calling us or using our online booking system. After the tour, you can complete our online registration form and pay a $150 non-refundable registration fee to secure your spot. Currently, we have limited openings in our pre-K program, but our 2.5-3 year old class has a 3-4 month waiting list. We recommend getting on our waiting list early, as spots fill quickly, especially for fall enrollment.</div>
+                    </details>
+                </div>
+                
+                <div class="faq-item">
+                    <details>
+                        <summary>What safety protocols and licensing does your facility maintain?</summary>
+                        <div class="faq-answer">We are fully licensed by the Washington State Department of Children, Youth, and Families (DCYF) and maintain all required safety certifications. Our facility features secure entry with keypad access, all staff are background-checked and First Aid/CPR certified, and we conduct monthly emergency drills. We're located in a purpose-built facility in Forest Park with fenced outdoor play areas, and we follow strict health protocols including daily sanitization and illness policies. Our license is prominently displayed in our lobby, and our last inspection report is available upon request.</div>
+                    </details>
+                </div>
+                
+            </div>
+            
+        <div class="related-searches-text" style="margin-top: 1.5rem; padding: 1rem; background: #f8f9fa; border-left: 3px solid #FFD700; font-size: 0.9rem; color: #666;">
+          <strong>Related Searches:</strong> preschool near me, Everett WA summer camp for kids, best preschool in Everett, affordable preschool Everett WA, Everett before and after school care, kindergarten readiness program Everett, nature camp for preschoolers near Everett
+        </div>
+      
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready for Expert Before and After Care Services in Marysville, WA?</h2>
+            <p>Contact The Preschool at Forest Park today for your free consultation and experience the difference that professional before and after care services make.</p>
+            <a href="https://forestparkpreschool.com//contact" class="cta-button">Contact The Preschool at Forest Park Today</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Preschool at Forest Park. All rights reserved.</p>
+            <p>Licensed & Insured Before and After Care Services in Marysville, WA</p>
+            <p><a href="https://forestparkpreschool.com/">Visit The Preschool at Forest Park</a> | Professional before and after care solutions since 2015</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
